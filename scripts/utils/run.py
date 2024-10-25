@@ -26,8 +26,10 @@ def set_env(database):
   os.environ["AFL_FAST_CAL"] = "1"
   os.environ["AFL_CUSTOM_MUTATOR_LIBRARY"] = get_mutator_so_path(database)
   os.environ["SQUIRREL_CONFIG"] = get_config_path(database)
+  
+  # AFL custom env variables
   os.environ["AFL_I_DONT_CARE_ABOUT_MISSING_CRASHES"] = "1"
-
+  os.environ["AFL_SKIP_CPUFREQ"] = "1"
 def run(database, input_dir, output_dir=None, config_file=None, fuzzer=None):
   # Precondition checks
   if database not in DBMS:
