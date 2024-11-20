@@ -20,8 +20,8 @@ RUN chmod +w /etc/sudoers && \
 USER dobigthing
 WORKDIR /home
 
-RUN git clone https://github.com/OMH4ck/Squirrel.git && \
-    cd Squirrel && git submodule update --init && \
+RUN git clone https://github.com/Zrealshadow/Squirrel.git && \
+    cd Squirrel && git pull && git submodule update --init && \
     cmake -S . -B build -DCMAKE_BUILD_TYPE=Release -DPOSTGRESQL=ON && \
     cmake --build build -j && \
     cd AFLplusplus/ && LLVM_CONFIG=llvm-config-14 make -j20
