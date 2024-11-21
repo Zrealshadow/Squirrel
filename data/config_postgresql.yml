@@ -6,7 +6,8 @@ should_exist: ["init_lib", "data_lib"]
 # init_lib: /home/Squirrel/data/fuzz_root/pgsql_init_lib_std_wo_base
 # init_lib: /home/Squirrel/data/fuzz_root/pgsql_init_lib_pg
 # init_lib: /home/Squirrel/data/fuzz_root/pgsql_init_lib_pg_wo_base
-init_lib: /home/Squirrel/data/fuzz_root/pgsql_init_lib_std_pg
+# init_lib: /home/Squirrel/data/fuzz_root/pgsql_init_lib_std_pg
+init_lib: /home/Squirrel/data/fuzz_root/pgsql_init_lib_std_pg_ts
 data_lib: /home/Squirrel/data/fuzz_root/pqsql_data_lib
 db: postgresql
 passwd: ''
